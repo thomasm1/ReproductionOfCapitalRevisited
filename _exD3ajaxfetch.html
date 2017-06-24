@@ -21,14 +21,9 @@ https://github.com/curran/screencasts
   </head>
   <body>
     <script>
-
-      // This function fetches a file using AJAX.
-      // 
-
+ 
       // The given callback is invoked when the request finishes.
-
-      // 
-
+ 
       // The callback signature is callback(err, data) where:
       //  * "err" is an error object, or null if no error occurred.
       //  * "data" is the content of the loaded file as a string.
@@ -52,8 +47,8 @@ https://github.com/curran/screencasts
         };
         xhr.send(null);
       }
-      // Parses a CSV string into an array of objects.
-      // Similar to d3.csv.parse(), documented at
+      // Parses CSV string into an array of objects.
+      // Similar to d3.csv.parse()  
       // github.com/mbostock/d3/wiki/CSV#parse
         
       function parseCSV(csvString, accessor){
@@ -74,12 +69,12 @@ https://github.com/curran/screencasts
 
       // Fetch the CSV file using AJAX.
 
-      getFile("iris.csv", function(err, irisCSVString){
+      getFile("HistoryAbbrev.csv", function(err, histCSVString){
         if(err){
           alert("Could not load file");
         } else {
           // Parse the CSV string into an array of objects.
-          var parsedCSV = parseCSV(irisCSVString, function(rowObject){
+          var parsedCSV = parseCSV(histCSVString, function(rowObject){
             // Parse strings into numbers for numeric columns.
             rowObject["petal length"] = +rowObject["petal length"];
             rowObject["petal width"] = +rowObject["petal width"];
